@@ -23,12 +23,17 @@ public class SecurityConfig {
                 .anyRequest()
                 .authenticated()
                 .and()
-                .formLogin()
-                .and()
-                .httpBasic(withDefaults());
+                .oauth2Login();
+//                .formLogin()
+//                .and()
+//                .httpBasic(withDefaults());
 
         return http.build();
     }
+
+    // 參考
+    // https://spring.io/guides/tutorials/spring-boot-oauth2/
+    // https://medium.com/swlh/spring-boot-oauth2-login-with-github-88b178e0c004
 
     /*@Override
     protected void configure(HttpSecurity http) throws Exception {

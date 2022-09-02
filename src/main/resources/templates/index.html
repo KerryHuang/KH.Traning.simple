@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="utf-8"/>
     <title>Demo</title>
@@ -10,6 +10,13 @@
 </head>
 <body>
   <h1>Demo</h1>
-  <div class="container"></div>
+  <div class="container unauthenticated">
+      <div>
+          With GitHub: <a href="/oauth2/authorization/github">click here</a>
+      </div>
+      <div>
+          With Google: <a href="/oauth2/authorization/google">click here</a>
+      </div>
+  </div>
 </body>
 </html>
