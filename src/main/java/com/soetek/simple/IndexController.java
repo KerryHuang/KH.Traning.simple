@@ -10,4 +10,9 @@ public class IndexController {
     String hello2(){
         return "hello2";
     }
+
+    @RequestMapping("/")
+    String root() {
+        return "index";
+    }
 }
